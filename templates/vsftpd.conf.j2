@@ -1,5 +1,8 @@
 ftpd_banner={{ vsftpd_ftpd_banner }}
 listen=YES
+{% if vsftpd_enable_ipv6 is defined and vsftpd_enable_ipv6 %}
+listen_ipv6=YES
+{% endif %}
 anonymous_enable=NO
 xferlog_enable={{ vsftpd_xferlog_enable }}
 use_localtime=YES
